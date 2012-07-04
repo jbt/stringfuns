@@ -1,0 +1,83 @@
+body{
+  background: #e7e7e7;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.step{
+  margin: 20px auto;
+  padding: 10px;
+  width: 650px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  -o-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+h2{
+  float: left;
+  width: 100px;
+  margin: 10px;
+  padding: 0;
+  text-align: left;
+}
+
+textarea{
+  width: 500px;
+  margin: 10px;
+  height: 100px;
+  border: 1px solid #999;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  -ms-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.step-2{
+  height: 160px
+}
+
+#btns{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 500px;
+}
+
+#btns div{
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px
+}
+
+#btns button{
+  display: block;
+  width: 155px;
+  margin: 2px 0;
+}
+
+.foot{
+  position: fixed;
+  width: 100%;
+  bottom: 40px;
+  font-size: 14px;
+  color: #222;
+}
+
+a{
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover{
+  color: #888;
+}
+
+a:active{
+  color: #555;
+}
