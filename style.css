@@ -5,6 +5,7 @@ body{
 }
 
 .step{
+  z-index: 2;
   margin: 20px auto;
   padding: 10px;
   width: 650px;
@@ -63,6 +64,7 @@ textarea{
 
 .foot{
   position: fixed;
+  z-index: 1;
   width: 100%;
   bottom: 40px;
   font-size: 14px;
