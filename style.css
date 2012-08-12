@@ -1,24 +1,91 @@
-body{
+/* Layout */
+
+* {
+  cursor: default;
+}
+
+body {
   background: #e7e7e7;
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  color: #333;
 }
 
-.step{
-  z-index: 2;
+.step {
   margin: 20px auto;
   padding: 10px;
   width: 650px;
   background: #fff;
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  -o-box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  position: relative;
+  overflow: auto;
 }
 
-h2{
+textarea {
+  width: 500px;
+  margin: 10px;
+  height: 100px;
+  cursor: auto;
+  border: 1px solid #999;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+textarea#out {
+  outline: 0;
+}
+
+#btns {
+  float: right;
+  width: 520px;
+  margin: 10px;
+  margin-right: 0;
+  text-align: left;
+}
+
+#btns div {
+  margin-top: 20px;
+}
+
+#btns div:first-child {
+  margin-top: 0;
+}
+
+#btns a {
+  display: inline-block;
+  width: 230px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+}
+
+#btns a:active {
+  position: relative;
+  top: 1px;
+}
+
+.foot {
+  font-size: 14px;
+  padding: 100px;
+}
+
+/* Typography */
+
+h1 {
+  width: 650px;
+  margin: 40px auto 40px;
+  text-align: left;
+}
+
+h1 #pick {
+  float: right;
+}
+
+h1, h2, h3 {
+  font-weight: 100;
+}
+
+h2 {
   float: left;
   width: 100px;
   margin: 10px;
@@ -26,60 +93,25 @@ h2{
   text-align: left;
 }
 
-textarea{
-  width: 500px;
-  margin: 10px;
-  height: 100px;
-  border: 1px solid #999;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-  -ms-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-  -o-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-}
-
-.step-2{
-  height: 160px
-}
-
-#btns{
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  bottom: 20px;
-  width: 500px;
-}
-
-#btns div{
-  display: inline-block;
-  vertical-align: top;
-  margin: 2px
-}
-
-#btns button{
-  display: block;
-  width: 155px;
-  margin: 2px 0;
-}
-
-.foot{
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  bottom: 40px;
-  font-size: 14px;
-  color: #222;
-}
-
-a{
+a {
   text-decoration: none;
   color: #666;
 }
 
-a:hover{
-  color: #888;
+a:hover {
+  color: black;
 }
 
-a:active{
+a:active {
   color: #555;
+}
+
+.amp {
+  font-family: 'Hoefler Text', 'Palatino Linotype', 'Baskerville', serif;
+  font-style: italic;
+}
+
+.arrow {
+  font-size: x-large;
+  color: #bbb;
 }
