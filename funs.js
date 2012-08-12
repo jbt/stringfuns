@@ -12,14 +12,14 @@ if (typeof String.prototype.escapeHTML != 'function') {
       var x = a.charCodeAt(0);
       return (x > 127) ? '&#'+x+';' : a;
     });
-  }
+  };
 }
 
 /* String.reverse() */
 if (typeof String.prototype.reverse != 'function') {
   String.prototype.reverse = function () {
     return this.split('').reverse().join('');
-  }
+  };
 }
 
 /* String.md5() */
@@ -37,7 +37,7 @@ if (typeof String.prototype.btoa != 'function') {
     // Use the implementation-supplied base64 function
     String.prototype.btoa = function() {
       return window.btoa(this);
-    }
+    };
   } else {
     String.prototype.btoa = function() {
       // https://gist.github.com/999166
@@ -45,7 +45,7 @@ if (typeof String.prototype.btoa != 'function') {
       var b64e = function(a,b,c,d,e){for(d=e='';a[d|0]||(b='=',d%1);e+=b[63&c>>8-d%1*8])c=c<<8|a.charCodeAt(d-=-.75);return e};
 
       return b64e(this, b64table);
-    }
+    };
   }
 }
 
@@ -55,7 +55,7 @@ if (typeof String.prototype.atob != 'function') {
     // Use the implementation-supplied base64 function
     String.prototype.atob = function() {
       return window.atob(this);
-    }
+    };
   } else {
     String.prototype.atob = function() {
       // https://gist.github.com/1020396
@@ -63,13 +63,13 @@ if (typeof String.prototype.atob != 'function') {
       var b64d = function(d,b,c,u,r,q,x){for(r=q=x='';c=d[x++];~c&&(u=q%4?u*64+c:c,q++%4)?r+=String.fromCharCode(255&u>>(-2*q&6)):0)c=b.indexOf(c);return r}
 
       return b64d(this.split(''), b64table);
-    }
+    };
   }
 }
 
 /* String.capitalize() */
 if (typeof String.prototype.capitalize != 'function') String.prototype.capitalize = function() {
-  return this[0].toUpperCase() + this.substr(1).toLowerCase();
+  return this.charAt(0).toUpperCase() + this.substr(1).toLowerCase();
 }
 
 /* String.chomp(chr) */
@@ -77,7 +77,7 @@ if (typeof String.prototype.chomp != 'function') String.prototype.chomp = functi
   if (!chr) var chr = "\n";
   var t = this;
 
-  while (t.length && t[t.length - 1] == chr) {
+  while (t.length && t.charAt(t.length - 1) == chr) {
     t = t.substring(0, t.length - 1);
   }
 
@@ -90,7 +90,7 @@ if (typeof String.prototype.squeeze != 'function') String.prototype.squeeze = fu
   var out = "";
 
   for (var i = 0; i < this.length; i++) {
-    var chr = this[i];
+    var chr = this.charAt(i);
     if (chr != last) out += chr;
     last = chr;
   }
@@ -100,7 +100,7 @@ if (typeof String.prototype.squeeze != 'function') String.prototype.squeeze = fu
 
 /* String.times() */
 if (typeof String.prototype.times != 'function') String.prototype.times = function(n) {
-  if (!n) var n = 2;
+  if (!n) n = 2;
   var t = this, out = "";
   
   for (var i = 0; i < n; i++) {
@@ -117,8 +117,8 @@ if (typeof String.prototype.trim != 'function') String.prototype.trim = function
 
 /* String.truncate() */
 if (typeof String.prototype.truncate != 'function') String.prototype.truncate = function(n, suffix) {
-  if (!n) var n = 140;
-  if (!suffix) var suffix = "...";
+  if (!n) n = 140;
+  if (!suffix) suffix = "...";
   var t = this;
   
   if (t.length > n) {
