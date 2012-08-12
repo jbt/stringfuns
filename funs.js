@@ -116,7 +116,7 @@ if (typeof String.prototype.trim != 'function') String.prototype.trim = function
 
 /* String.truncate() */
 if (typeof String.prototype.truncate != 'function') String.prototype.truncate = function(n, suffix) {
-  if (!n) var n = 100;
+  if (!n) var n = 140;
   if (!suffix) var suffix = "...";
   var t = this;
   

@@ -2,6 +2,9 @@
  
 This is **stringfuns**, a small collection of JavaScript string functions that
 should come by default but don't. Most are inspired by other languages.
+
+The index.html file contains a demonstration page that should be quite useful
+on its own.
  
 - String.atob()
 - String.btoa()
