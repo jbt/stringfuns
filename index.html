@@ -21,7 +21,6 @@
       document.getElementById('btns').appendChild(c);
     }
 
-
     function clickCallback(fun){
       return function(){
         document.getElementById('out').value = document.getElementById('in').value[fun]();
@@ -52,21 +51,28 @@
 
   <script src="funs.js"></script>
   <script>
-  addFuns([
-    ['escapeHTML', 'Escape HTML'],
-    ['reverse', 'Reverse'],
-  ]);
+    addFuns([
+      ['escapeHTML', 'Escape HTML'],
+      ['reverse', 'Reverse'],
+    ]);
   
-  addFuns([
-    ['md5', 'MD5'],
-    ['sha1', 'SHA-1'],
-    ['sha256', 'SHA-256'],
-  ]);
+    addFuns([
+      ['md5', 'MD5'],
+      ['sha1', 'SHA-1'],
+      ['sha256', 'SHA-256'],
+    ]);
   
-  addFuns([
-    ['btoa', 'Base 64 encode'],
-    ['atob', 'Base 64 decode'],
-  ]);
+    addFuns([
+      ['btoa', 'Base 64 encode'],
+      ['atob', 'Base 64 decode'],
+    ]);
+  
+    addFuns([
+      ['capitalize', 'Capitalize'],
+      ['chomp', 'Chomp trailing newlines'],
+      ['squeeze', 'Squeeze repeats'],
+      ['trim', 'Trim whitespace'],
+    ]);
   </script>
 </body>
 </html>

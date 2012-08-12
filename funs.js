@@ -65,3 +65,39 @@ if (typeof String.prototype.atob != 'function') {
     }
   }
 }
+
+/* String.capitalize() */
+if (typeof String.prototype.capitalize != 'function') String.prototype.capitalize = function() {
+  return this[0].toUpperCase() + this.substr(1).toLowerCase();
+}
+
+/* String.chomp(chr) */
+if (typeof String.prototype.chomp != 'function') String.prototype.chomp = function(chr) {
+  if (!chr) var chr = "\n";
+  var t = this;
+
+  while (t.length && t[t.length - 1] == chr) {
+    t = t.substring(0, t.length - 1);
+  }
+
+  return t;
+}
+
+/* String.squeeze() */
+if (typeof String.prototype.squeeze != 'function') String.prototype.squeeze = function() {
+  var last = "";
+  var out = "";
+
+  for (var i = 0; i < this.length; i++) {
+    var chr = this[i];
+    if (chr != last) out += chr;
+    last = chr;
+  }
+
+  return out;
+}
+
+/* String.trim() */
+if (typeof String.prototype.trim != 'function') String.prototype.trim = function() {
+  return this.replace(/^\s+|\s+$/g, '');
+}
