@@ -59,6 +59,7 @@ if (typeof String.prototype.atob != 'function') {
   } else {
     String.prototype.atob = function() {
       // https://gist.github.com/1020396
+      var b64table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
       var b64d = function(d,b,c,u,r,q,x){for(r=q=x='';c=d[x++];~c&&(u=q%4?u*64+c:c,q++%4)?r+=String.fromCharCode(255&u>>(-2*q&6)):0)c=b.indexOf(c);return r}
 
       return b64d(this.split(''), b64table);
