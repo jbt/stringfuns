@@ -113,3 +113,16 @@ if (typeof String.prototype.times != 'function') String.prototype.times = functi
 if (typeof String.prototype.trim != 'function') String.prototype.trim = function() {
   return this.replace(/^\s+|\s+$/g, '');
 }
+
+/* String.truncate() */
+if (typeof String.prototype.truncate != 'function') String.prototype.truncate = function(n, suffix) {
+  if (!n) var n = 100;
+  if (!suffix) var suffix = "...";
+  var t = this;
+  
+  if (t.length > n) {
+    return t.substr(0, n - suffix.length) + suffix;
+  } else {
+    return t;
+  }
+}
