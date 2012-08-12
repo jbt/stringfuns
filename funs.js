@@ -97,6 +97,18 @@ if (typeof String.prototype.squeeze != 'function') String.prototype.squeeze = fu
   return out;
 }
 
+/* String.times() */
+if (typeof String.prototype.times != 'function') String.prototype.times = function(n) {
+  if (!n) var n = 2;
+  var t = this, out = "";
+  
+  for (var i = 0; i < n; i++) {
+    out += t;
+  }
+  
+  return out;
+}
+
 /* String.trim() */
 if (typeof String.prototype.trim != 'function') String.prototype.trim = function() {
   return this.replace(/^\s+|\s+$/g, '');
