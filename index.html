@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>String Functions</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    function addFun(fun, funName, btnContainer){
-      var btn = document.createElement('button');
-      btn.innerHTML = funName;
-      btn.onclick = clickCallback(fun);
-      if(!btnContainer) btnContainer = document.getElementById('btns');
-      btnContainer.appendChild(btn);
-    }
-
-    function addFuns(funs){
-      var c = document.createElement('div');
-      c.className = 'btnGroup';
-      for(var i = 0; i < funs.length; i += 1){
-        addFun(funs[i][0], funs[i][1], c);
+  <head>
+    <title>String Functions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function addFun(fun, funName, btnContainer){
+        var btn = document.createElement('a');
+        btn.innerHTML = funName;
+        btn.onclick = clickCallback(fun);
+        if(!btnContainer) btnContainer = document.getElementById('btns');
+        btnContainer.appendChild(btn);
       }
-      document.getElementById('btns').appendChild(c);
-    }
 
-    function clickCallback(fun){
-      return function(){
-        document.getElementById('out').value = document.getElementById('in').value[fun]();
-      };
-    }
-  </script>
-</head>
-<body>
-  <h1>Some Useful String Functions</h1>
-  <div class="wrap">
-    <div class="step step-1">
-      <h2>Input:</h2>
-      <textarea id="in"></textarea>
-    </div>
-    <div class="step step-2">
-      <h2>Function:</h2>
-      <div id="btns"></div>
-    </div>
-    <div class="step step-3">
-      <h2>Output:</h2>
-      <textarea id="out" readonly></textarea>
-    </div>
-  </div>
+      function addFuns(funs){
+        var c = document.createElement('div');
+        c.className = 'btnGroup';
+        for(var i = 0; i < funs.length; i += 1){
+          addFun(funs[i][0], funs[i][1], c);
+        }
+        document.getElementById('btns').appendChild(c);
+      }
 
-  <div class="foot">
-    <p>The product of a bored evening by <a href="http://twitter.com/floopily" target="_blank">JT</a></p>
-  </div>
+      function clickCallback(fun){
+        return function(){
+          document.getElementById('out').value = document.getElementById('in').value[fun]();
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Some Useful String Functions <span id="pick">&#9874;</span></h1>
+    <div class="wrap">
+      <div class="step step-1">
+        <h2>Input:</h2>
+        <textarea id="in"></textarea>
+      </div>
+      <div class="step step-2">
+        <h2>Function:</h2>
+        <div id="btns"></div>
+      </div>
+      <div class="step step-3">
+        <h2>Output:</h2>
+        <textarea id="out" readonly></textarea>
+      </div>
+    </div>
 
-  <script src="funs.js"></script>
-  <script>
-    addFuns([
-      ['escapeHTML', 'Escape HTML'],
-      ['reverse', 'Reverse'],
-    ]);
+    <div class="foot">
+      <p>The product of a bored evening by <a href="http://twitter.com/floopily" target="_blank">JT</a> <span class="amp">&amp;</span> a bored Sunday morning by <a href="http://wandernauta.nl" target="_blank">WN</a></p>
+    </div>
+
+    <script src="funs.js"></script>
+    <script>
+      addFuns([
+        ['escapeHTML', 'Escape HTML'],
+        ['reverse', 'Reverse'],
+      ]);
   
-    addFuns([
-      ['md5', 'MD5'],
-      ['sha1', 'SHA-1'],
-      ['sha256', 'SHA-256'],
-    ]);
+      addFuns([
+        ['md5', 'MD5 digest'],
+        ['sha1', 'SHA-1 hash'],
+        ['sha256', 'SHA-256 hash'],
+      ]);
   
-    addFuns([
-      ['btoa', 'Base 64 encode'],
-      ['atob', 'Base 64 decode'],
-    ]);
+      addFuns([
+        ['btoa', 'Base 64 encode'],
+        ['atob', 'Base 64 decode'],
+      ]);
   
-    addFuns([
-      ['capitalize', 'Capitalize'],
-      ['chomp', 'Chomp trailing newlines'],
-      ['squeeze', 'Squeeze repeats'],
-      ['trim', 'Trim whitespace'],
-      ['times', 'Double'],
-      ['truncate', 'Truncate to 100 chars']
-    ]);
-  </script>
-</body>
+      addFuns([
+        ['capitalize', 'Capitalize'],
+        ['chomp', 'Chomp trailing newlines'],
+        ['squeeze', 'Squeeze repeats'],
+        ['trim', 'Trim whitespace'],
+        ['times', 'Double'],
+        ['truncate', 'Truncate to 100 chars']
+      ]);
+    </script>
+  </body>
 </html>
