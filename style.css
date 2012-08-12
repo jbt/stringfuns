@@ -1,5 +1,9 @@
 /* Layout */
 
+* {
+  cursor: default;
+}
+
 body {
   background: #e7e7e7;
   text-align: center;
@@ -21,8 +25,13 @@ textarea {
   width: 500px;
   margin: 10px;
   height: 100px;
+  cursor: auto;
   border: 1px solid #999;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+textarea#out {
+  outline: 0;
 }
 
 #btns {
@@ -48,6 +57,11 @@ textarea {
   margin-right: 10px;
   margin-bottom: 10px;
   background: #eee;
+}
+
+#btns a:active {
+  position: relative;
+  top: 1px;
 }
 
 .foot {
@@ -95,4 +109,9 @@ a:active {
 .amp {
   font-family: 'Hoefler Text', 'Palatino Linotype', 'Baskerville', serif;
   font-style: italic;
+}
+
+.arrow {
+  font-size: x-large;
+  color: #bbb;
 }
