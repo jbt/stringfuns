@@ -1,4 +1,6 @@
-body{
+/* Layout */
+
+body {
   background: #e7e7e7;
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6,21 +8,7 @@ body{
   color: #333;
 }
 
-h1 {
-  width: 650px;
-  margin: 40px auto 40px;
-  text-align: left;
-}
-
-h1 #pick {
-  float: right;
-}
-
-h1, h2, h3 {
-  font-weight: 100;
-}
-
-.step{
+.step {
   margin: 20px auto;
   padding: 10px;
   width: 650px;
@@ -29,15 +17,7 @@ h1, h2, h3 {
   overflow: auto;
 }
 
-h2{
-  float: left;
-  width: 100px;
-  margin: 10px;
-  padding: 0;
-  text-align: left;
-}
-
-textarea{
+textarea {
   width: 500px;
   margin: 10px;
   height: 100px;
@@ -70,21 +50,45 @@ textarea{
   background: #eee;
 }
 
-.foot{
+.foot {
   font-size: 14px;
   padding: 100px;
 }
 
-a{
+/* Typography */
+
+h1 {
+  width: 650px;
+  margin: 40px auto 40px;
+  text-align: left;
+}
+
+h1 #pick {
+  float: right;
+}
+
+h1, h2, h3 {
+  font-weight: 100;
+}
+
+h2 {
+  float: left;
+  width: 100px;
+  margin: 10px;
+  padding: 0;
+  text-align: left;
+}
+
+a {
   text-decoration: none;
   color: #666;
 }
 
-a:hover{
+a:hover {
   color: black;
 }
 
-a:active{
+a:active {
   color: #555;
 }
 
