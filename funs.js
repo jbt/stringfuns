@@ -5,9 +5,9 @@
 if (typeof String.prototype.escapeHTML != 'function') {
   String.prototype.escapeHTML = function () {
     return this
+    .replace(/&/g,'&amp;')
     .replace(/>/g,'&gt;')
     .replace(/</g,'&lt;')
-    .replace(/&/g,'&amp;')
     .replace(/./g, function(a){
       var x = a.charCodeAt(0);
       return (x > 127) ? '&#'+x+';' : a;
